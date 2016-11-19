@@ -1,0 +1,9 @@
+Directory contains the code for UART on STM32F3
+I'm using UART4: 
+  Dedicated Pins for Transmission/Receiver are: 
+  PC10 - Tx
+  PC11 - Rx
+The code that are sent over Serial transmission, has a dedicated function like-
+  A: To Turn on all the LEDs (Port E, Pins 15-8)
+  Off: To Turn them off (basically any command expect 'A', will turn them off).
+  B: To start the ADC and get the temp. value from Internal Temperature sensor provided in the kit.
