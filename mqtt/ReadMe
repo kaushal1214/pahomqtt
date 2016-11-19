@@ -1,0 +1,13 @@
+Here, MQTT is implemented using C language. So there are many dependencies, goto the official Paho Eclipse for details.
+The program is writting on the serial port, on which your board UART has been detacted (mine was /dev/ttyUSB0), so it requires root privelages.
+Steps:
+  1.Run a Broker (any mosquitto,hivemq...)
+  2.Execute this C program in superuser mode
+  3.You should be able to see, 'Ready..', if not then try to run the program again.
+  4.Publish messages on a channel. (default one is 'Marvel')
+  5.To turn on LED: Publish 'A'
+  6.To get the Temp. value: Publish B
+    Actually right now it will just return the ADC count for the current temp., I tried to convert it into celsius but that's giving a really big number. 
+    So please help me with this here.
+  7.To turn off the LEDs: Publish anything but 'A'
+ Enjoy!!
